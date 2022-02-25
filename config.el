@@ -83,6 +83,13 @@
        (:desc "Dash at point"                "d"       #'dash-at-point
         :desc "Dash at point with docset"    "D"       #'dash-at-point-with-docset)))
 
+(add-hook 'with-editor-mode-hook
+          (lambda ()
+            (map! :leader
+                  (:prefix-map ("e" . "with-editor-mode")
+                   (:desc "Finish"   "c" #'with-editor-finish
+                    :desc "Cancel"   "k" #'with-editor-cancel)))))
+
 
 (setq lsp-haskell-server-path "/Users/ivan/.local/bin/haskell-language-server-macOS-8.10.7")
 
