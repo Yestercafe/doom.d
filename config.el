@@ -78,4 +78,13 @@
          :desc "Move this tab to left"        "h"      #'centaur-tabs-move-current-tab-to-left
          :desc "Move this tab to right"       "l"      #'centaur-tabs-move-current-tab-to-right))))
 
+(map! :leader
+      (:prefix-map ("?" . "docs")
+       (:desc "Dash at point"                "d"       #'dash-at-point
+        :desc "Dash at point with docset"    "D"       #'dash-at-point-with-docset)))
+
+
 (setq lsp-haskell-server-path "/Users/ivan/.local/bin/haskell-language-server-macOS-8.10.7")
+
+
+(global-wakatime-mode)
