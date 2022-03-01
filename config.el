@@ -83,6 +83,10 @@
        (:desc "Dash at point"                "d"       #'dash-at-point
         :desc "Dash at point with docset"    "D"       #'dash-at-point-with-docset)))
 
+(map! :leader
+      :desc "Disable highlight"              "0"       #'evil-ex-nohighlight)
+
+
 (add-hook 'with-editor-mode-hook
           (lambda ()
             (map! :leader
