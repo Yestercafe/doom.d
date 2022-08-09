@@ -6,8 +6,9 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
-(setq user-full-name "Ivan Chien"
-      user-mail-address "qyc027@gmail.com")
+(setq
+ user-full-name "Ivan Chien"
+ user-mail-address "qyc027@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -21,12 +22,12 @@
 ;; font string. You generally only need these two:
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
-(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 14))
+;;(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 14))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-material)
+(setq doom-theme 'doom-monokai-pro)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -54,7 +55,10 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(load! "+key-bindings")
-(load! "+ui")
-(load! "+lsp")
-(load! "+wakatime")
+(defun load-addon (addon)
+  (load! addon "~/.doom.d/addons"))
+
+(load-addon "+key-bindings")
+(load-addon "+ui")
+(load-addon "+lsp")
+(load-addon "+wakatime")
