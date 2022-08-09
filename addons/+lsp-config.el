@@ -1,9 +1,5 @@
 ;;; +lsp.el -*- lexical-binding: t; -*-
 
-;; haskell-lsp
-(setq lsp-haskell-server-path "/Users/ivan/.local/bin/haskell-language-server-macOS-8.10.7")
-
-
 ;; cc-lsp + eglot
 (setq-default lsp-clangd-binary-path "/etc/local/opt/llvm/bin/clangd")
 (setq-default lsp-clangd-version "13.0.1")
