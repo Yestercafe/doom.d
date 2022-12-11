@@ -2,7 +2,7 @@
 
 ;; cc-lsp + eglot
 (setq-default lsp-clangd-binary-path "/usr/local/opt/llvm/bin/clangd")
-(setq-default lsp-clangd-version "14.0.6")
+(setq-default lsp-clangd-version "15.0.3")
 
 (setq lsp-clients-clangd-args '("-j=3"
 				"--background-index"
